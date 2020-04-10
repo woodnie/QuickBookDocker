@@ -1,72 +1,66 @@
-`[root@localhost mydockerfile]# docker build --help`
+`[root@localhost mydockerfile]# docker build --help`
 
-``
+`Usage:  docker build [OPTIONS] PATH | URL | -`
 
-`Usage:  docker build [OPTIONS] PATH | URL | -`
+`Build an image from a Dockerfile`
 
-``
+`Options:`
 
-`Build an image from a Dockerfile`
+`--add-host list           Add a custom host-to-IP mapping (host:ip)`
 
-``
+`--build-arg list          Set build-time variables`
 
-`Options:`
+`--cache-from strings      Images to consider as cache sources`
 
-`      --add-host list           Add a custom host-to-IP mapping (host:ip)`
+`--cgroup-parent string    Optional parent cgroup for the container`
 
-`      --build-arg list          Set build-time variables`
+`--compress                Compress the build context using gzip`
 
-`      --cache-from strings      Images to consider as cache sources`
+`--cpu-period int          Limit the CPU CFS (Completely Fair Scheduler) period`
 
-`      --cgroup-parent string    Optional parent cgroup for the container`
+`--cpu-quota int           Limit the CPU CFS (Completely Fair Scheduler) quota`
 
-`      --compress                Compress the build context using gzip`
+`-c, --cpu-shares int          CPU shares (relative weight)`
 
-`      --cpu-period int          Limit the CPU CFS (Completely Fair Scheduler) period`
+`--cpuset-cpus string      CPUs in which to allow execution (0-3, 0,1)`
 
-`      --cpu-quota int           Limit the CPU CFS (Completely Fair Scheduler) quota`
+`--cpuset-mems string      MEMs in which to allow execution (0-3, 0,1)`
 
-`  -c, --cpu-shares int          CPU shares (relative weight)`
+`--disable-content-trust   Skip image verification (default true)`
 
-`      --cpuset-cpus string      CPUs in which to allow execution (0-3, 0,1)`
+`-f, --file string             Name of the Dockerfile (Default is 'PATH/Dockerfile')`
 
-`      --cpuset-mems string      MEMs in which to allow execution (0-3, 0,1)`
+`--force-rm                Always remove intermediate containers`
 
-`      --disable-content-trust   Skip image verification (default true)`
+`--iidfile string          Write the image ID to the file`
 
-`  -f, --file string             Name of the Dockerfile (Default is 'PATH/Dockerfile')`
+`--isolation string        Container isolation technology`
 
-`      --force-rm                Always remove intermediate containers`
+`--label list              Set metadata for an image`
 
-`      --iidfile string          Write the image ID to the file`
+`-m, --memory bytes            Memory limit`
 
-`      --isolation string        Container isolation technology`
+`--memory-swap bytes       Swap limit equal to memory plus swap: '-1' to enable unlimited swap`
 
-`      --label list              Set metadata for an image`
+`--network string          Set the networking mode for the RUN instructions during build (default "default")`
 
-`  -m, --memory bytes            Memory limit`
+`--no-cache                Do not use cache when building the image`
 
-`      --memory-swap bytes       Swap limit equal to memory plus swap: '-1' to enable unlimited swap`
+`--pull                    Always attempt to pull a newer version of the image`
 
-`      --network string          Set the networking mode for the RUN instructions during build (default "default")`
+`-q, --quiet                   Suppress the build output and print image ID on success`
 
-`      --no-cache                Do not use cache when building the image`
+`--rm                      Remove intermediate containers after a successful build (default true)`
 
-`      --pull                    Always attempt to pull a newer version of the image`
+`--security-opt strings    Security options`
 
-`  -q, --quiet                   Suppress the build output and print image ID on success`
+`--shm-size bytes          Size of /dev/shm`
 
-`      --rm                      Remove intermediate containers after a successful build (default true)`
+`-t, --tag list                Name and optionally a tag in the 'name:tag' format`
 
-`      --security-opt strings    Security options`
+`--target string           Set the target build stage to build.`
 
-`      --shm-size bytes          Size of /dev/shm`
-
-`  -t, --tag list                Name and optionally a tag in the 'name:tag' format`
-
-`      --target string           Set the target build stage to build.`
-
-`      --ulimit ulimit           Ulimit options (default [])`
+`--ulimit ulimit           Ulimit options (default [])`
 
 `[root@localhost mydockerfile]#`
 
