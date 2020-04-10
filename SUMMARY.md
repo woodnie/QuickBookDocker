@@ -22,11 +22,11 @@
   * [docker cp](docker-cp.md)
   * [exit vs ctrl+P+Q](exit-vs-ctrl+p+q.md)
   * [docker commit](docker-commit.md)
-* [Docker image](docker-image.md)
-* [add third part docker mirro](add-third-part-docker-mirro.md)
-* [Docker images mangement](docker-image-mangement.md)
-  * [doccker images](docker-image-mangement/doccker-images.md)
+* [docker image](docker-image.md)
+* [third part docker mirro](third-part-docker-mirro.md)
+* [Docker images](docker-image-mangement.md)
   * [docker search](docker-search.md)
   * docker pull
   * [docker rmi](docker-rmi.md)
+* [docker compose](docker-compose.md)
 
