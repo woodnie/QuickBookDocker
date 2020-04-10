@@ -1,28 +1,20 @@
-\[root@localhost ~\]\# docker attach --help
+`[root@localhost ~]# docker attach --help`
 
+`Usage:  docker attach [OPTIONS] CONTAINER`
 
+`Attach local standard input, output, and error streams to a running container`
 
-Usage:  docker attach \[OPTIONS\] CONTAINER
+`Options:`
 
+```
+  --detach-keys string   Override the key sequence for detaching a container
 
+  --no-stdin             Do not attach STDIN
 
-Attach local standard input, output, and error streams to a running container
-
-
-
-Options:
-
-      --detach-keys string   Override the key sequence for detaching a container
-
-      --no-stdin             Do not attach STDIN
-
-      --sig-proxy            Proxy all received signals to the process \(default true\)
+  --sig-proxy            Proxy all received signals to the process \(default true\)
+```
 
 \[root@localhost ~\]\#
-
-
-
-
 
 \[root@34cf6899e4c7 /\]\# read escape sequence
 
@@ -30,5 +22,5 @@ Options:
 
 \[root@localhost ~\]\# docker attach 34cf6899e4c7
 
-\[root@34cf6899e4c7 /\]\# 
+\[root@34cf6899e4c7 /\]\#
 
