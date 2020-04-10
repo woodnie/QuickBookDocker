@@ -23,10 +23,12 @@
   * [exit vs ctrl+P+Q](exit-vs-ctrl+p+q.md)
   * [docker commit](docker-commit.md)
 * [docker image](docker-image.md)
-* [third part docker mirro](third-part-docker-mirro.md)
+  * docker ls
+* [docker history](docker-history.md)
+* [docker build](docker-build.md)
 * [Docker images](docker-image-mangement.md)
   * [docker search](docker-search.md)
-  * docker pull
+  * [docker pull](docker-pull.md)
   * [docker rmi](docker-rmi.md)
 * [docker compose](docker-compose.md)
 
