@@ -24,8 +24,8 @@
   * [docker commit](docker-commit.md)
 * [docker image](docker-image.md)
   * docker ls
-* [docker history](docker-history.md)
-* [docker build](docker-build.md)
+  * [docker build](docker-build.md)
+  * [docker history](docker-history.md)
 * [Docker images](docker-image-mangement.md)
   * [docker search](docker-search.md)
   * [docker pull](docker-pull.md)
