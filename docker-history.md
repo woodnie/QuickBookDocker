@@ -1,26 +1,22 @@
 \[root@localhost ~\]\# docker history --help
 
-
-
-Usage:  docker history \[OPTIONS\] IMAGE
-
-
+`Usage:  docker history [OPTIONS] IMAGE`
 
 Show the history of an image
 
-
-
 Options:
 
-      --format string   Pretty-print images using a Go template
+```
+  --format string   Pretty-print images using a Go template
+```
 
-  -H, --human           Print sizes and dates in human readable format \(default true\)
+-H, --human           Print sizes and dates in human readable format \(default true\)
 
-      --no-trunc        Don't truncate output
+```
+  --no-trunc        Don't truncate output
+```
 
-  -q, --quiet           Only show numeric IDs
-
-\[root@localhost ~\]\#
+-q, --quiet           Only show numeric IDs
 
 
 
