@@ -1,0 +1,2 @@
+\[root@localhost ~\]\# docker info
+

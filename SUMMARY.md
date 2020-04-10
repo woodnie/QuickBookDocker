@@ -4,9 +4,9 @@
 * [Docker ](Dcoker.md)
 * [Docker Prxoy Seting](docker-prxoy-seting.md)
 * [Docker Commandline Referrance ](docker-commandline-referrance.md)
-  * [docker --help](docker-commandline-referrance/docker-help.md)
-  * [docker version](docker-commandline-referrance/docker-help/docker-version.md)
-  * docker info
+  * [docker --help](docker-help.md)
+  * [docker version](docker-version.md)
+  * [docker info](docker-info.md)
   * [docker run](docker-commandline-referrance/docker-run.md)
   * [docker ps](docker-commandline-referrance/docker-ps.md)
   * [docker start](docker-start.md)
