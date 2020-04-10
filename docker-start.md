@@ -1,0 +1,22 @@
+\[root@localhost ~\]\# docker start --help
+
+
+
+Usage:  docker start \[OPTIONS\] CONTAINER \[CONTAINER...\]
+
+
+
+Start one or more stopped containers
+
+
+
+Options:
+
+  -a, --attach               Attach STDOUT/STDERR and forward signals
+
+      --detach-keys string   Override the key sequence for detaching a container
+
+  -i, --interactive          Attach container's STDIN
+
+\[root@localhost ~\]\# docker start CONTAINER\_ID/CONTAINER\_NAME
+
