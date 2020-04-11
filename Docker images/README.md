@@ -1,2 +1,2 @@
-Mangemnet Dicker imges 
+Mangemnet Docker imges
 
