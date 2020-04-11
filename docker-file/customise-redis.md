@@ -1,8 +1,8 @@
+`docker run -p 6379:6379 \-v /mydockervolume/myredis3.2/data:/data`
+
+`\-v /mydockervolume/myredis3.2/conf/redis.conf:/usr/local/etc/redis/redis.conf`
+
+`\-d redis:3.2 redis-server /usr/local/etc/redis/redis.conf --appendonly yes`
 
 
-`docker run -p 6379:6379 \-v /mydockervolume/myredis3.2/data:/data `
-
-`                \-v /mydockervolume/myredis3.2/conf/redis.conf:/usr/local/etc/redis/redis.conf  `
-
-`                \-d redis:3.2 redis-server /usr/local/etc/redis/redis.conf --appendonly yes`
 
