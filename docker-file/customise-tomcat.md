@@ -1,68 +1,52 @@
 # docker file:
 
-`[root@localhost mytomcat9]# cat mytomcat9`
+`[root@localhost mytomcat9]# cat mytomcat9`
 
-`FROM         centos`
+`FROM         centos`
 
-``
+`MAINTAINER    <wood.nie@zf.com>`
 
-`MAINTAINER    <wood.nie@zf.com>`
+`#把宿主机当前上下文的c.txt拷贝到容器/usr/local/路径下`
 
-``
+`COPY c.txt /usr/local/cincontainer.txt`
 
-`#把宿主机当前上下文的c.txt拷贝到容器/usr/local/路径下`
+`#把java与tomcat添加到容器中`
 
-`COPY c.txt /usr/local/cincontainer.txt`
+`ADD openjdk-9_linux-x64_bin.tar.gz /usr/local/`
 
-``
+`ADD apache-tomcat-9.0.8.tar.gz /usr/local/`
 
-`#把java与tomcat添加到容器中`
+`RUN chown root:root /usr/local/jdk-9`
 
-`ADD openjdk-9_linux-x64_bin.tar.gz /usr/local/`
+`RUN alias ll='ls -l --color=auto'`
 
-`ADD apache-tomcat-9.0.8.tar.gz /usr/local/`
+`#设置工作访问时候的WORKDIR路径，登录落脚点`
 
-``
+`ENV MYPATH /usr/local`
 
-`RUN chown root:root /usr/local/jdk-9`
+`WORKDIR $MYPATH`
 
-`RUN alias ll='ls -l --color=auto'`
+`#配置java与tomcat环境变量`
 
-``
+`ENV JAVA_HOME /usr/local/openjdk-9`
 
-`#设置工作访问时候的WORKDIR路径，登录落脚点`
+`ENV CLASSPATH $JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar`
 
-`ENV MYPATH /usr/local`
+`ENV CATALINA_HOME /usr/local/apache-tomcat-9.0.8`
 
-`WORKDIR $MYPATH`
+`ENV CATALINA_BASE /usr/local/apache-tomcat-9.0.8`
 
-``
+`ENV PATH $PATH:$JAVA_HOME/bin:$CATALINA_HOME/lib:$CATALINA_HOME/bin`
 
-`#配置java与tomcat环境变量`
+`#容器运行时监听的端口`
 
-`ENV JAVA_HOME /usr/local/openjdk-9`
+`EXPOSE  8080`
 
-`ENV CLASSPATH $JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar`
+`#启动时运行tomcat`
 
-`ENV CATALINA_HOME /usr/local/apache-tomcat-9.0.8`
+`# ENTRYPOINT ["/usr/local/apache-tomcat-9.0.8/bin/startup.sh" ]`
 
-`ENV CATALINA_BASE /usr/local/apache-tomcat-9.0.8`
-
-`ENV PATH $PATH:$JAVA_HOME/bin:$CATALINA_HOME/lib:$CATALINA_HOME/bin`
-
-``
-
-`#容器运行时监听的端口`
-
-`EXPOSE  8080`
-
-``
-
-`#启动时运行tomcat`
-
-`# ENTRYPOINT ["/usr/local/apache-tomcat-9.0.8/bin/startup.sh" ]`
-
-`# CMD ["/usr/local/apache-tomcat-9.0.8/bin/catalina.sh","run"]`
+`# CMD ["/usr/local/apache-tomcat-9.0.8/bin/catalina.sh","run"]`
 
 `CMD /usr/local/apache-tomcat-9.0.8/bin/startup.sh && tail -F /usr/local/apache-tomcat-9.0.8/bin/logs/catalina.out`
 
@@ -72,73 +56,71 @@
 
 # Sample Web application:
 
-`[root@localhost test]# pwd`
+`[root@localhost test]# pwd`
 
-`/mydockerfile/mytomcat9/test`
+`/mydockerfile/mytomcat9/test`
 
-`[root@localhost test]# ll`
+`[root@localhost test]# ll`
 
-`total 4`
+`total 4`
 
-`-rw-r--r--. 1 root root 508 Feb  3 22:02 a.jsp`
+`-rw-r--r--. 1 root root 508 Feb  3 22:02 a.jsp`
 
-`drwxr-xr-x. 2 root root  21 Feb  3 22:02 WEB-INF`
+`drwxr-xr-x. 2 root root  21 Feb  3 22:02 WEB-INF`
 
-`[root@localhost test]# ll WEB-INF/`
+`[root@localhost test]# ll WEB-INF/`
 
-`total 4`
+`total 4`
 
-`-rw-r--r--. 1 root root 337 Feb  3 22:02 web.xml`
+`-rw-r--r--. 1 root root 337 Feb  3 22:02 web.xml`
 
 `[root@localhost test]#`
 
 ## web.xml
 
-`<?xml version="1.0" encoding="UTF-8"?>`
+`<?xml version="1.0" encoding="UTF-8"?>`
 
-`<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`
+`<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`
 
-` xmlns="http://java.sun.com/xml/ns/javaee"`
+`xmlns="http://java.sun.com/xml/ns/javaee"`
 
-` xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"`
+`xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"`
 
-` id="WebApp_ID" version="2.5">`
+`id="WebApp_ID" version="2.5">`
 
-` <display-name>test</display-name>`
+`<display-name>test</display-name>`
 
 `</web-app>`
 
 ## a.jsp
 
-`<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>`
+`<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>`
 
-`<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">`
+`<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">`
 
-`<html>`
+`<html>`
 
-` <head>`
+`<head>`
 
-`   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">`
+`<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">`
 
-`   <title>Insert title here</title>`
+`<title>Insert title here</title>`
 
-` </head>`
+`</head>`
 
-` <body>`
+`<body>`
 
-`   -----------welcome------------`
+`-----------welcome------------`
 
-`   <%="i am in docker tomcat self "%>`
+`<%="i am in docker tomcat self "%>`
 
-`   <br>`
+`<br>`
 
-`   <br>`
+`<br>`
 
-`   <% System.out.println("=============docker tomcat self");%>`
+`<% System.out.println("=============docker tomcat self");%>`
 
-` </body>`
+`</body>`
 
-`</html>`
-
-
+`</html>`
 
