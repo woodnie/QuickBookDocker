@@ -16,11 +16,3 @@ Options:
 
 \[root@localhost mytomcat9\]\#
 
-
-
-example :
-
-![](/assets/commit tomcat.png)
-
-![](/assets/commit tomcat2.png)
-
