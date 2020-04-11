@@ -34,4 +34,6 @@
 * [UnionFS](unionfs.md)
 * [example: tomcat image](exampletomcat-image.md)
 * [example: run tomcat image](example-run-tomcat-image.md)
+* [example: commit tomcat image](example-commit-tomcat-image.md)
+* [docker commit](docker-commit.md)
 
