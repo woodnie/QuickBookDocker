@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [Docker ](Dcoker.md)
+* [Docker Third Part Sorce](Third-part-docker-mirrom.md)
 * [Docker Prxoy Seting](docker-prxoy-seting.md)
 * [Docker Commandline Referrance ](Command Reference/README.md)
   * [docker --help](Command Reference/docker-help.md)
@@ -23,7 +24,6 @@
   * [docker search](Docker images/docker-search.md)
   * [docker pull](Docker images/docker-pull.md)
   * [docker rmi](Docker images/docker-rmi.md)
-* [docker compose](docker-compose.md)
 * [Understanding image](Understanding image/README.md)
   * [image](image.md)
   * [UnionFS](Understanding image/unionfs.md)
