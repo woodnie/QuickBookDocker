@@ -45,7 +45,7 @@
     * [dricet add ](Docker-volume/add-volume/dricet-add.md)
     * [add from docker file](Docker-volume/add-volume/add-from-docker-file.md)
   * [data volume container](Docker-volume/data-volume-continer.md)
-* [Docker file](docker-file.md)
+* [Docker file](docker-file/README.md)
   * [DockerFile structure](docker-file/dockerfile-structure.md)
     * [ONBUILD](docker-file/onbuild.md)
     * [CMD](docker-file/cmd.md)
