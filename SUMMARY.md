@@ -35,4 +35,5 @@
   * [UnionFS](unionfs.md)
   * [example: run tomcat image](example-run-tomcat-image.md)
   * [example: commit tomcat image](example-commit-tomcat-image.md)
+  * [example: commit tomcat image](example-tomcat-image.md)
 
