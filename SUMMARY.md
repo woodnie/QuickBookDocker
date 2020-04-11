@@ -31,8 +31,8 @@
   * [docker pull](docker-pull.md)
   * [docker rmi](docker-rmi.md)
 * [docker compose](docker-compose.md)
-* [UnionFS](unionfs.md)
-* [example: tomcat image](exampletomcat-image.md)
-* [example: run tomcat image](example-run-tomcat-image.md)
-* [example: commit tomcat image](example-commit-tomcat-image.md)
+* [understanding image](understanding-image.md)
+  * [UnionFS](unionfs.md)
+  * [example: run tomcat image](example-run-tomcat-image.md)
+  * [example: commit tomcat image](example-commit-tomcat-image.md)
 
