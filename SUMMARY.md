@@ -35,6 +35,7 @@
   * [docker exec](Docker Start & Stop/docker-exec.md)
   * [docker attach](Docker Start & Stop/docker-attach.md)
   * [exit vs ctrl+P+Q](Docker Start & Stop/exit-vs-ctrl+p+q.md)
+  * [docker run](Docker Start & Stop/docker-run.md)
 * [Addition Seting](addition-seting/README.md)
   * [Docker Prxoy Seting](addition-seting/docker-prxoy-seting.md)
   * [Docker Third Part Sorce](addition-seting/Third-part-docker-mirrom.md)
